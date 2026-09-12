@@ -1,0 +1,260 @@
+<p align="center">
+<img
+  src="https://raw.githubusercontent.com/michaelfaith/eslint-plugin-package-json/main/site/src/assets/logo/logo.svg"
+  alt="Logo Image"
+  height="240"
+/>
+
+<h1 align="center">ESLint Plugin: Package JSON</h1>
+
+<p align="center">
+	Rules for consistent, readable, and valid package.json files.
+	🗂️
+</p>
+
+<p align="center">
+	<!-- prettier-ignore-start -->
+	<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+	<a href="#contributors" target="_blank"><img alt="👪 All Contributors: 44" src="https://img.shields.io/badge/%F0%9F%91%AA_all_contributors-44-21bb42.svg" /></a>
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
+	<!-- prettier-ignore-end -->
+	<a href="https://codecov.io/gh/michaelfaith/eslint-plugin-package-json" target="_blank"><img alt="🧪 Coverage" src="https://img.shields.io/codecov/c/github/michaelfaith/eslint-plugin-package-json?label=%F0%9F%A7%AA%20coverage" /></a>
+	<a href="https://github.com/michaelfaith/eslint-plugin-package-json/blob/main/LICENSE.md" target="_blank"><img alt="📝 License: MIT" src="https://img.shields.io/badge/%F0%9F%93%9D_license-MIT-21bb42.svg" /></a>
+	<a href="http://npmjs.com/package/eslint-plugin-package-json" target="_blank"><img alt="📦 npm version" src="https://img.shields.io/npm/v/eslint-plugin-package-json?color=21bb42&label=%F0%9F%93%A6%20npm" /></a>
+</p>
+
+## Getting Started
+
+See [Getting Started](https://eslint-plugin-package-json.dev/getting-started) for details.
+
+## Supported Rules
+
+<!-- begin auto-generated rules list -->
+
+💼 Configurations enabled in.\
+✅ Set in the `recommended` configuration.\
+🎨 Set in the `stylistic` configuration.\
+🔧 Automatically fixable by the [`--fix` CLI option](https://eslint.org/docs/user-guide/command-line-interface#--fix).\
+💡 Manually fixable by [editor suggestions](https://eslint.org/docs/latest/use/core-concepts#rule-suggestions).
+
+| Name                                                                                                                            | Description                                                                                                                                                                                  | 💼  | 🔧  | 💡  |
+| :------------------------------------------------------------------------------------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-- | :-- | :-- |
+| [bin-name-casing](https://eslint-plugin-package-json.dev/rules/bin-name-casing)                                                 | Enforce that names for bin properties are in kebab case.                                                                                                                                     | 🎨  |     | 💡  |
+| [exports-subpaths-style](https://eslint-plugin-package-json.dev/rules/exports-subpaths-style)                                   | Enforce consistent format for the exports field (implicit or explicit subpaths).                                                                                                             | 🎨  | 🔧  |     |
+| [no-empty-fields](https://eslint-plugin-package-json.dev/rules/no-empty-fields)                                                 | Reports on unnecessary empty arrays and objects.                                                                                                                                             | ✅  |     | 💡  |
+| [no-local-dependencies](https://eslint-plugin-package-json.dev/rules/no-local-dependencies)                                     | Requires that dependencies do not use local file paths, which will likely result in errors when installing from a registry.                                                                  |     |     |     |
+| [no-redundant-files](https://eslint-plugin-package-json.dev/rules/no-redundant-files)                                           | Prevents adding unnecessary / redundant files.                                                                                                                                               | ✅  |     | 💡  |
+| [no-redundant-publishConfig](https://eslint-plugin-package-json.dev/rules/no-redundant-publishConfig)                           | Warns when publishConfig.access is used in unscoped packages.                                                                                                                                | ✅  |     | 💡  |
+| [order-properties](https://eslint-plugin-package-json.dev/rules/order-properties)                                               | Enforces that package properties are declared in a consistent order.                                                                                                                         | 🎨  | 🔧  |     |
+| [prefer-rolling-workspace-spec](https://eslint-plugin-package-json.dev/rules/prefer-rolling-workspace-spec)                     | Require that dependencies declared with workspace protocol use a rolling workspace spec instead of a specific semver range.                                                                  |     |     | 💡  |
+| [repository-shorthand](https://eslint-plugin-package-json.dev/rules/repository-shorthand)                                       | Enforce either object or shorthand declaration for repository.                                                                                                                               | ✅  | 🔧  |     |
+| [require-attribution](https://eslint-plugin-package-json.dev/rules/require-attribution)                                         | Ensures that proper attribution is included, requiring that either `author` or `contributors` is defined, and that if `contributors` is present, it should include at least one contributor. | ✅  |     | 💡  |
+| [restrict-dependency-ranges](https://eslint-plugin-package-json.dev/rules/restrict-dependency-ranges)                           | Restricts the range of dependencies to allow or disallow specific types of ranges.                                                                                                           |     |     | 💡  |
+| [restrict-private-properties](https://eslint-plugin-package-json.dev/rules/restrict-private-properties)                         | Disallows unnecessary properties in private packages.                                                                                                                                        |     | 🔧  | 💡  |
+| [restrict-top-level-properties](https://eslint-plugin-package-json.dev/rules/restrict-top-level-properties)                     | Disallows specified top-level properties in package.json.                                                                                                                                    |     |     | 💡  |
+| [scripts-name-casing](https://eslint-plugin-package-json.dev/rules/scripts-name-casing)                                         | Enforce that names for `scripts` are in kebab case (optionally separated by colons).                                                                                                         | 🎨  |     | 💡  |
+| [sort-collections](https://eslint-plugin-package-json.dev/rules/sort-collections)                                               | Selected collections must be in a consistent order (lexicographical for most; lifecycle-aware for scripts).                                                                                  | ✅  | 🔧  |     |
+| [specify-peers-locally](https://eslint-plugin-package-json.dev/rules/specify-peers-locally)                                     | Requires that all peer dependencies are also declared as dev dependencies                                                                                                                    | ✅  |     | 💡  |
+| [unique-dependencies](https://eslint-plugin-package-json.dev/rules/unique-dependencies)                                         | Checks a dependency isn't specified more than once (i.e. in `dependencies` and `devDependencies`)                                                                                            | ✅  |     | 💡  |
+| [valid-peerDependenciesMeta-relationship](https://eslint-plugin-package-json.dev/rules/valid-peerDependenciesMeta-relationship) | Enforces that any dependencies declared in `peerDependenciesMeta` are also defined in the package's `peerDependencies`.                                                                      | ✅  |     | 💡  |
+| [valid-repository-directory](https://eslint-plugin-package-json.dev/rules/valid-repository-directory)                           | Enforce that if repository directory is specified, it matches the path to the package.json file                                                                                              | ✅  |     | 💡  |
+
+### Require Properties
+
+This group of rules allows you to require that the associated top-level property must be present in the `package.json`.
+
+| Name                                                                                                                         | Description                                                 | 💼  | 🔧  | 💡  |
+| :--------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------- | :-- | :-- | :-- |
+| [require-author](https://eslint-plugin-package-json.dev/rules/require-properties/require-author)                             | Requires the `author` property to be present.               |     | 🔧  |     |
+| [require-bin](https://eslint-plugin-package-json.dev/rules/require-properties/require-bin)                                   | Requires the `bin` property to be present.                  |     |     |     |
+| [require-browser](https://eslint-plugin-package-json.dev/rules/require-properties/require-browser)                           | Requires the `browser` property to be present.              |     |     |     |
+| [require-bugs](https://eslint-plugin-package-json.dev/rules/require-properties/require-bugs)                                 | Requires the `bugs` property to be present.                 |     |     |     |
+| [require-bundleDependencies](https://eslint-plugin-package-json.dev/rules/require-properties/require-bundleDependencies)     | Requires the `bundleDependencies` property to be present.   |     |     |     |
+| [require-config](https://eslint-plugin-package-json.dev/rules/require-properties/require-config)                             | Requires the `config` property to be present.               |     |     |     |
+| [require-contributors](https://eslint-plugin-package-json.dev/rules/require-properties/require-contributors)                 | Requires the `contributors` property to be present.         |     |     |     |
+| [require-cpu](https://eslint-plugin-package-json.dev/rules/require-properties/require-cpu)                                   | Requires the `cpu` property to be present.                  |     |     |     |
+| [require-dependencies](https://eslint-plugin-package-json.dev/rules/require-properties/require-dependencies)                 | Requires the `dependencies` property to be present.         |     |     |     |
+| [require-description](https://eslint-plugin-package-json.dev/rules/require-properties/require-description)                   | Requires the `description` property to be present.          | ✅  |     |     |
+| [require-devDependencies](https://eslint-plugin-package-json.dev/rules/require-properties/require-devDependencies)           | Requires the `devDependencies` property to be present.      |     |     |     |
+| [require-devEngines](https://eslint-plugin-package-json.dev/rules/require-properties/require-devEngines)                     | Requires the `devEngines` property to be present.           |     |     |     |
+| [require-directories](https://eslint-plugin-package-json.dev/rules/require-properties/require-directories)                   | Requires the `directories` property to be present.          |     |     |     |
+| [require-engines](https://eslint-plugin-package-json.dev/rules/require-properties/require-engines)                           | Requires the `engines` property to be present.              |     |     |     |
+| [require-exports](https://eslint-plugin-package-json.dev/rules/require-properties/require-exports)                           | Requires the `exports` property to be present.              | ✅  |     |     |
+| [require-files](https://eslint-plugin-package-json.dev/rules/require-properties/require-files)                               | Requires the `files` property to be present.                | ✅  |     |     |
+| [require-funding](https://eslint-plugin-package-json.dev/rules/require-properties/require-funding)                           | Requires the `funding` property to be present.              |     |     |     |
+| [require-gypfile](https://eslint-plugin-package-json.dev/rules/require-properties/require-gypfile)                           | Requires the `gypfile` property to be present.              |     |     |     |
+| [require-homepage](https://eslint-plugin-package-json.dev/rules/require-properties/require-homepage)                         | Requires the `homepage` property to be present.             |     |     |     |
+| [require-keywords](https://eslint-plugin-package-json.dev/rules/require-properties/require-keywords)                         | Requires the `keywords` property to be present.             |     |     |     |
+| [require-libc](https://eslint-plugin-package-json.dev/rules/require-properties/require-libc)                                 | Requires the `libc` property to be present.                 |     |     |     |
+| [require-license](https://eslint-plugin-package-json.dev/rules/require-properties/require-license)                           | Requires the `license` property to be present.              | ✅  |     |     |
+| [require-main](https://eslint-plugin-package-json.dev/rules/require-properties/require-main)                                 | Requires the `main` property to be present.                 |     |     |     |
+| [require-man](https://eslint-plugin-package-json.dev/rules/require-properties/require-man)                                   | Requires the `man` property to be present.                  |     |     |     |
+| [require-module](https://eslint-plugin-package-json.dev/rules/require-properties/require-module)                             | Requires the `module` property to be present.               |     |     |     |
+| [require-name](https://eslint-plugin-package-json.dev/rules/require-properties/require-name)                                 | Requires the `name` property to be present.                 | ✅  |     |     |
+| [require-optionalDependencies](https://eslint-plugin-package-json.dev/rules/require-properties/require-optionalDependencies) | Requires the `optionalDependencies` property to be present. |     |     |     |
+| [require-os](https://eslint-plugin-package-json.dev/rules/require-properties/require-os)                                     | Requires the `os` property to be present.                   |     |     |     |
+| [require-packageManager](https://eslint-plugin-package-json.dev/rules/require-properties/require-packageManager)             | Requires the `packageManager` property to be present.       |     |     |     |
+| [require-peerDependencies](https://eslint-plugin-package-json.dev/rules/require-properties/require-peerDependencies)         | Requires the `peerDependencies` property to be present.     |     |     |     |
+| [require-peerDependenciesMeta](https://eslint-plugin-package-json.dev/rules/require-properties/require-peerDependenciesMeta) | Requires the `peerDependenciesMeta` property to be present. |     |     |     |
+| [require-private](https://eslint-plugin-package-json.dev/rules/require-properties/require-private)                           | Requires the `private` property to be present.              |     | 🔧  |     |
+| [require-publishConfig](https://eslint-plugin-package-json.dev/rules/require-properties/require-publishConfig)               | Requires the `publishConfig` property to be present.        |     |     |     |
+| [require-repository](https://eslint-plugin-package-json.dev/rules/require-properties/require-repository)                     | Requires the `repository` property to be present.           | ✅  |     |     |
+| [require-scripts](https://eslint-plugin-package-json.dev/rules/require-properties/require-scripts)                           | Requires the `scripts` property to be present.              |     |     |     |
+| [require-sideEffects](https://eslint-plugin-package-json.dev/rules/require-properties/require-sideEffects)                   | Requires the `sideEffects` property to be present.          | ✅  |     |     |
+| [require-type](https://eslint-plugin-package-json.dev/rules/require-properties/require-type)                                 | Requires the `type` property to be present.                 | ✅  | 🔧  |     |
+| [require-types](https://eslint-plugin-package-json.dev/rules/require-properties/require-types)                               | Requires the `types` property to be present.                |     |     |     |
+| [require-version](https://eslint-plugin-package-json.dev/rules/require-properties/require-version)                           | Requires the `version` property to be present.              | ✅  |     |     |
+
+### Valid Properties
+
+This group of rules allows you to enforce that the value of the associated top-level property is valid. All of these rules are include in the `recommended` config.
+
+| Name                                                                                                                   | Description                                                                           | 💼  | 🔧  | 💡  |
+| :--------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------ | :-- | :-- | :-- |
+| [valid-author](https://eslint-plugin-package-json.dev/rules/valid-properties/valid-author)                             | Enforce that the `author` property is valid.                                          | ✅  | 🔧  |     |
+| [valid-bin](https://eslint-plugin-package-json.dev/rules/valid-properties/valid-bin)                                   | Enforce that the `bin` property is valid.                                             | ✅  |     |     |
+| [valid-browser](https://eslint-plugin-package-json.dev/rules/valid-properties/valid-browser)                           | Enforce that the `browser` property is valid.                                         | ✅  |     |     |
+| [valid-bugs](https://eslint-plugin-package-json.dev/rules/valid-properties/valid-bugs)                                 | Enforce that the `bugs` property is valid.                                            | ✅  |     |     |
+| [valid-bundleDependencies](https://eslint-plugin-package-json.dev/rules/valid-properties/valid-bundleDependencies)     | Enforce that the `bundleDependencies` (also `bundledDependencies`) property is valid. | ✅  |     |     |
+| [valid-config](https://eslint-plugin-package-json.dev/rules/valid-properties/valid-config)                             | Enforce that the `config` property is valid.                                          | ✅  |     |     |
+| [valid-contributors](https://eslint-plugin-package-json.dev/rules/valid-properties/valid-contributors)                 | Enforce that the `contributors` property is valid.                                    | ✅  |     |     |
+| [valid-cpu](https://eslint-plugin-package-json.dev/rules/valid-properties/valid-cpu)                                   | Enforce that the `cpu` property is valid.                                             | ✅  |     |     |
+| [valid-dependencies](https://eslint-plugin-package-json.dev/rules/valid-properties/valid-dependencies)                 | Enforce that the `dependencies` property is valid.                                    | ✅  |     |     |
+| [valid-description](https://eslint-plugin-package-json.dev/rules/valid-properties/valid-description)                   | Enforce that the `description` property is valid.                                     | ✅  |     |     |
+| [valid-devDependencies](https://eslint-plugin-package-json.dev/rules/valid-properties/valid-devDependencies)           | Enforce that the `devDependencies` property is valid.                                 | ✅  |     |     |
+| [valid-devEngines](https://eslint-plugin-package-json.dev/rules/valid-properties/valid-devEngines)                     | Enforce that the `devEngines` property is valid.                                      | ✅  |     |     |
+| [valid-directories](https://eslint-plugin-package-json.dev/rules/valid-properties/valid-directories)                   | Enforce that the `directories` property is valid.                                     | ✅  |     |     |
+| [valid-engines](https://eslint-plugin-package-json.dev/rules/valid-properties/valid-engines)                           | Enforce that the `engines` property is valid.                                         | ✅  |     |     |
+| [valid-exports](https://eslint-plugin-package-json.dev/rules/valid-properties/valid-exports)                           | Enforce that the `exports` property is valid.                                         | ✅  |     |     |
+| [valid-files](https://eslint-plugin-package-json.dev/rules/valid-properties/valid-files)                               | Enforce that the `files` property is valid.                                           | ✅  |     |     |
+| [valid-funding](https://eslint-plugin-package-json.dev/rules/valid-properties/valid-funding)                           | Enforce that the `funding` property is valid.                                         | ✅  |     |     |
+| [valid-gypfile](https://eslint-plugin-package-json.dev/rules/valid-properties/valid-gypfile)                           | Enforce that the `gypfile` property is valid.                                         | ✅  |     |     |
+| [valid-homepage](https://eslint-plugin-package-json.dev/rules/valid-properties/valid-homepage)                         | Enforce that the `homepage` property is valid.                                        | ✅  |     |     |
+| [valid-keywords](https://eslint-plugin-package-json.dev/rules/valid-properties/valid-keywords)                         | Enforce that the `keywords` property is valid.                                        | ✅  |     |     |
+| [valid-libc](https://eslint-plugin-package-json.dev/rules/valid-properties/valid-libc)                                 | Enforce that the `libc` property is valid.                                            | ✅  |     |     |
+| [valid-license](https://eslint-plugin-package-json.dev/rules/valid-properties/valid-license)                           | Enforce that the `license` property is valid.                                         | ✅  |     |     |
+| [valid-main](https://eslint-plugin-package-json.dev/rules/valid-properties/valid-main)                                 | Enforce that the `main` property is valid.                                            | ✅  |     |     |
+| [valid-man](https://eslint-plugin-package-json.dev/rules/valid-properties/valid-man)                                   | Enforce that the `man` property is valid.                                             | ✅  |     |     |
+| [valid-module](https://eslint-plugin-package-json.dev/rules/valid-properties/valid-module)                             | Enforce that the `module` property is valid.                                          | ✅  |     |     |
+| [valid-name](https://eslint-plugin-package-json.dev/rules/valid-properties/valid-name)                                 | Enforce that the `name` property is valid.                                            | ✅  |     |     |
+| [valid-optionalDependencies](https://eslint-plugin-package-json.dev/rules/valid-properties/valid-optionalDependencies) | Enforce that the `optionalDependencies` property is valid.                            | ✅  |     |     |
+| [valid-os](https://eslint-plugin-package-json.dev/rules/valid-properties/valid-os)                                     | Enforce that the `os` property is valid.                                              | ✅  |     |     |
+| [valid-packageManager](https://eslint-plugin-package-json.dev/rules/valid-properties/valid-packageManager)             | Enforce that the `packageManager` property is valid.                                  | ✅  |     |     |
+| [valid-peerDependencies](https://eslint-plugin-package-json.dev/rules/valid-properties/valid-peerDependencies)         | Enforce that the `peerDependencies` property is valid.                                | ✅  |     |     |
+| [valid-peerDependenciesMeta](https://eslint-plugin-package-json.dev/rules/valid-properties/valid-peerDependenciesMeta) | Enforce that the `peerDependenciesMeta` property is valid.                            | ✅  |     |     |
+| [valid-private](https://eslint-plugin-package-json.dev/rules/valid-properties/valid-private)                           | Enforce that the `private` property is valid.                                         | ✅  |     |     |
+| [valid-publishConfig](https://eslint-plugin-package-json.dev/rules/valid-properties/valid-publishConfig)               | Enforce that the `publishConfig` property is valid.                                   | ✅  |     |     |
+| [valid-repository](https://eslint-plugin-package-json.dev/rules/valid-properties/valid-repository)                     | Enforce that the `repository` property is valid.                                      | ✅  |     |     |
+| [valid-scripts](https://eslint-plugin-package-json.dev/rules/valid-properties/valid-scripts)                           | Enforce that the `scripts` property is valid.                                         | ✅  |     |     |
+| [valid-sideEffects](https://eslint-plugin-package-json.dev/rules/valid-properties/valid-sideEffects)                   | Enforce that the `sideEffects` property is valid.                                     | ✅  |     |     |
+| [valid-type](https://eslint-plugin-package-json.dev/rules/valid-properties/valid-type)                                 | Enforce that the `type` property is valid.                                            | ✅  |     |     |
+| [valid-version](https://eslint-plugin-package-json.dev/rules/valid-properties/valid-version)                           | Enforce that the `version` property is valid.                                         | ✅  |     |     |
+| [valid-workspaces](https://eslint-plugin-package-json.dev/rules/valid-properties/valid-workspaces)                     | Enforce that the `workspaces` property is valid.                                      | ✅  |     |     |
+
+<!-- end auto-generated rules list -->
+
+These rules only run on `package.json` files; they will ignore all other files being linted.
+They can lint `package.json` files at project root and in any subfolder of the project, making this plugin great for monorepos.
+
+## Deprecation Policy
+
+We never _want_ to remove things, when we're building them!
+But the reality is that libraries evolve and deprecations are a fact of life.
+Following are the different timeframes that we've defined as it relates to deprecating APIs in this project.
+
+### RFC Timeframe (6 weeks)
+
+When some aspect of our API is going to be deprecated (and eventually removed), it must initially go through an RFC phase.
+Whoever's motivating the removal of the api, should create an RFC issue explaining the proposal and inviting feedback from the community.
+That RFC should remain active for at least 6 weeks.
+The RFC text should make clear what the target date is for closing the RFC.
+Once the RFC period is over, if the removal is still moving forward, the API(s) should be officially deprecated.
+
+### Removal Timeframe (6 months)
+
+Once an API has been marked as deprecated, it will remain intact for at least 6 months.
+After 6 months from the date of deprecation, the API is subject to removal.
+
+## Getting Involved
+
+See [Contributing](https://eslint-plugin-package-json.dev/getting-involved/contributing/), then [Development](https://eslint-plugin-package-json.dev/getting-involved/development/).
+If you're planning to contribute with AI tooling, please also read our [AI Contribution Policy](https://eslint-plugin-package-json.dev/getting-involved/contributing-with-ai/).
+
+Thanks! 🍻
+
+## Contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://alan.norbauer.com"><img src="https://avatars.githubusercontent.com/u/1009?v=4?s=100" width="100px;" alt="Alan"/><br /><sub><b>Alan</b></sub></a><br /><a href="https://github.com/michaelfaith/eslint-plugin-package-json/issues?q=author%3Aaltano" title="Bug reports">🐛</a> <a href="https://github.com/michaelfaith/eslint-plugin-package-json/commits?author=altano" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/AlexMan123456"><img src="https://avatars.githubusercontent.com/u/172595284?v=4?s=100" width="100px;" alt="AlexTheMan"/><br /><sub><b>AlexTheMan</b></sub></a><br /><a href="#ideas-AlexMan123456" title="Ideas, Planning, & Feedback">🤔</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/AndreasLindbergPAF"><img src="https://avatars.githubusercontent.com/u/59874563?v=4?s=100" width="100px;" alt="Andreas Lindberg"/><br /><sub><b>Andreas Lindberg</b></sub></a><br /><a href="https://github.com/michaelfaith/eslint-plugin-package-json/issues?q=author%3Aandreaslindbergpaf" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/andreww2012"><img src="https://avatars.githubusercontent.com/u/6554045?v=4?s=100" width="100px;" alt="Andrew Kazakov"/><br /><sub><b>Andrew Kazakov</b></sub></a><br /><a href="https://github.com/michaelfaith/eslint-plugin-package-json/issues?q=author%3Aandreww2012" title="Bug reports">🐛</a> <a href="https://github.com/michaelfaith/eslint-plugin-package-json/commits?author=andreww2012" title="Code">💻</a> <a href="#ideas-andreww2012" title="Ideas, Planning, & Feedback">🤔</a> <a href="#tool-andreww2012" title="Tools">🔧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://technotes.khitrenovich.com/"><img src="https://avatars.githubusercontent.com/u/3424762?v=4?s=100" width="100px;" alt="Anton Khitrenovich"/><br /><sub><b>Anton Khitrenovich</b></sub></a><br /><a href="#ideas-khitrenovich" title="Ideas, Planning, & Feedback">🤔</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://azat.io"><img src="https://avatars.githubusercontent.com/u/5698350?v=4?s=100" width="100px;" alt="Azat S."/><br /><sub><b>Azat S.</b></sub></a><br /><a href="#ideas-azat-io" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/michaelfaith/eslint-plugin-package-json/commits?author=azat-io" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/anomiex"><img src="https://avatars.githubusercontent.com/u/1030580?v=4?s=100" width="100px;" alt="Brad Jorsch"/><br /><sub><b>Brad Jorsch</b></sub></a><br /><a href="#ideas-anomiex" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/michaelfaith/eslint-plugin-package-json/issues?q=author%3Aanomiex" title="Bug reports">🐛</a> <a href="https://github.com/michaelfaith/eslint-plugin-package-json/commits?author=anomiex" title="Code">💻</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://christopher-buss.gitbook.io/portfolio"><img src="https://avatars.githubusercontent.com/u/32301681?v=4?s=100" width="100px;" alt="Christopher Buss"/><br /><sub><b>Christopher Buss</b></sub></a><br /><a href="https://github.com/michaelfaith/eslint-plugin-package-json/issues?q=author%3Achristopher-buss" title="Bug reports">🐛</a> <a href="#ideas-christopher-buss" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/michaelfaith/eslint-plugin-package-json/commits?author=christopher-buss" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/ClementValot"><img src="https://avatars.githubusercontent.com/u/65364056?v=4?s=100" width="100px;" alt="Clément Valot"/><br /><sub><b>Clément Valot</b></sub></a><br /><a href="https://github.com/michaelfaith/eslint-plugin-package-json/issues?q=author%3AClementValot" title="Bug reports">🐛</a> <a href="https://github.com/michaelfaith/eslint-plugin-package-json/commits?author=ClementValot" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://www.curtisjewell.dev/"><img src="https://avatars.githubusercontent.com/u/67483?v=4?s=100" width="100px;" alt="Curtis Jewell"/><br /><sub><b>Curtis Jewell</b></sub></a><br /><a href="#ideas-csjewell" title="Ideas, Planning, & Feedback">🤔</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://davidlj95.com"><img src="https://avatars.githubusercontent.com/u/8050648?v=4?s=100" width="100px;" alt="David LJ"/><br /><sub><b>David LJ</b></sub></a><br /><a href="https://github.com/michaelfaith/eslint-plugin-package-json/commits?author=davidlj95" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/DetachHead"><img src="https://avatars.githubusercontent.com/u/57028336?v=4?s=100" width="100px;" alt="DetachHead"/><br /><sub><b>DetachHead</b></sub></a><br /><a href="https://github.com/michaelfaith/eslint-plugin-package-json/commits?author=DetachHead" title="Code">💻</a> <a href="#ideas-DetachHead" title="Ideas, Planning, & Feedback">🤔</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://lishaduck.github.io"><img src="https://avatars.githubusercontent.com/u/88557639?v=4?s=100" width="100px;" alt="Eli"/><br /><sub><b>Eli</b></sub></a><br /><a href="#ideas-lishaduck" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/michaelfaith/eslint-plugin-package-json/issues?q=author%3Alishaduck" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://open-fixture-library.org"><img src="https://avatars.githubusercontent.com/u/202916?v=4?s=100" width="100px;" alt="Flo Edelmann"/><br /><sub><b>Flo Edelmann</b></sub></a><br /><a href="https://github.com/michaelfaith/eslint-plugin-package-json/commits?author=FloEdelmann" title="Documentation">📖</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="http://heggria.site"><img src="https://avatars.githubusercontent.com/u/34475327?v=4?s=100" width="100px;" alt="Heggria"/><br /><sub><b>Heggria</b></sub></a><br /><a href="#ideas-heggria" title="Ideas, Planning, & Feedback">🤔</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://hirok.io"><img src="https://avatars.githubusercontent.com/u/1075694?v=4?s=100" width="100px;" alt="Hiroki Osame"/><br /><sub><b>Hiroki Osame</b></sub></a><br /><a href="#ideas-privatenumber" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/michaelfaith/eslint-plugin-package-json/commits?author=privatenumber" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://vanyauhalin.me/"><img src="https://avatars.githubusercontent.com/u/56481109?v=4?s=100" width="100px;" alt="Ivan Uhalin"/><br /><sub><b>Ivan Uhalin</b></sub></a><br /><a href="#ideas-vanyauhalin" title="Ideas, Planning, & Feedback">🤔</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Zamiell"><img src="https://avatars.githubusercontent.com/u/5511220?v=4?s=100" width="100px;" alt="James"/><br /><sub><b>James</b></sub></a><br /><a href="https://github.com/michaelfaith/eslint-plugin-package-json/commits?author=Zamiell" title="Code">💻</a> <a href="#ideas-Zamiell" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/michaelfaith/eslint-plugin-package-json/issues?q=author%3AZamiell" title="Bug reports">🐛</a> <a href="https://github.com/michaelfaith/eslint-plugin-package-json/commits?author=Zamiell" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/zetlen"><img src="https://avatars.githubusercontent.com/u/1643758?v=4?s=100" width="100px;" alt="James Zetlen"/><br /><sub><b>James Zetlen</b></sub></a><br /><a href="https://github.com/michaelfaith/eslint-plugin-package-json/commits?author=zetlen" title="Code">💻</a> <a href="https://github.com/michaelfaith/eslint-plugin-package-json/issues?q=author%3Azetlen" title="Bug reports">🐛</a> <a href="https://github.com/michaelfaith/eslint-plugin-package-json/commits?author=zetlen" title="Documentation">📖</a> <a href="#infra-zetlen" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-zetlen" title="Maintenance">🚧</a> <a href="#tool-zetlen" title="Tools">🔧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://piranna.github.io/"><img src="https://avatars.githubusercontent.com/u/532414?v=4?s=100" width="100px;" alt="Jesús Leganés-Combarro"/><br /><sub><b>Jesús Leganés-Combarro</b></sub></a><br /><a href="https://github.com/michaelfaith/eslint-plugin-package-json/commits?author=piranna" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://www.joshuakgoldberg.com/"><img src="https://avatars.githubusercontent.com/u/3335181?v=4?s=100" width="100px;" alt="Josh Goldberg ✨"/><br /><sub><b>Josh Goldberg ✨</b></sub></a><br /><a href="#tool-JoshuaKGoldberg" title="Tools">🔧</a> <a href="https://github.com/michaelfaith/eslint-plugin-package-json/issues?q=author%3AJoshuaKGoldberg" title="Bug reports">🐛</a> <a href="https://github.com/michaelfaith/eslint-plugin-package-json/commits?author=JoshuaKGoldberg" title="Code">💻</a> <a href="#infra-JoshuaKGoldberg" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/michaelfaith/eslint-plugin-package-json/commits?author=JoshuaKGoldberg" title="Documentation">📖</a> <a href="#maintenance-JoshuaKGoldberg" title="Maintenance">🚧</a> <a href="#ideas-JoshuaKGoldberg" title="Ideas, Planning, & Feedback">🤔</a> <a href="#content-JoshuaKGoldberg" title="Content">🖋</a> <a href="#projectManagement-JoshuaKGoldberg" title="Project Management">📆</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/kendallgassner"><img src="https://avatars.githubusercontent.com/u/15275462?v=4?s=100" width="100px;" alt="Kendall Gassner"/><br /><sub><b>Kendall Gassner</b></sub></a><br /><a href="https://github.com/michaelfaith/eslint-plugin-package-json/commits?author=kendallgassner" title="Code">💻</a> <a href="#maintenance-kendallgassner" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/KristjanESPERANTO"><img src="https://avatars.githubusercontent.com/u/35647502?v=4?s=100" width="100px;" alt="Kristjan ESPERANTO"/><br /><sub><b>Kristjan ESPERANTO</b></sub></a><br /><a href="#ideas-kristjanesperanto" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/michaelfaith/eslint-plugin-package-json/issues?q=author%3Akristjanesperanto" title="Bug reports">🐛</a> <a href="https://github.com/michaelfaith/eslint-plugin-package-json/commits?author=kristjanesperanto" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/marcalexiei"><img src="https://avatars.githubusercontent.com/u/24919330?v=4?s=100" width="100px;" alt="Marco Pasqualetti"/><br /><sub><b>Marco Pasqualetti</b></sub></a><br /><a href="https://github.com/michaelfaith/eslint-plugin-package-json/commits?author=marcalexiei" title="Code">💻</a> <a href="#tool-marcalexiei" title="Tools">🔧</a> <a href="#maintenance-marcalexiei" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/lo1tuma"><img src="https://avatars.githubusercontent.com/u/169170?v=4?s=100" width="100px;" alt="Mathias Schreck"/><br /><sub><b>Mathias Schreck</b></sub></a><br /><a href="#ideas-lo1tuma" title="Ideas, Planning, & Feedback">🤔</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Cellule"><img src="https://avatars.githubusercontent.com/u/4157103?v=4?s=100" width="100px;" alt="Michael "Mike" Ferris"/><br /><sub><b>Michael "Mike" Ferris</b></sub></a><br /><a href="https://github.com/michaelfaith/eslint-plugin-package-json/commits?author=cellule" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://morrisoncole.co.uk"><img src="https://avatars.githubusercontent.com/u/963368?v=4?s=100" width="100px;" alt="Morrison Cole"/><br /><sub><b>Morrison Cole</b></sub></a><br /><a href="https://github.com/michaelfaith/eslint-plugin-package-json/issues?q=author%3AMorrisonCole" title="Bug reports">🐛</a> <a href="https://github.com/michaelfaith/eslint-plugin-package-json/commits?author=MorrisonCole" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/nschonni"><img src="https://avatars.githubusercontent.com/u/1297909?v=4?s=100" width="100px;" alt="Nick Schonning"/><br /><sub><b>Nick Schonning</b></sub></a><br /><a href="https://github.com/michaelfaith/eslint-plugin-package-json/commits?author=nschonni" title="Code">💻</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/OlivierZal"><img src="https://avatars.githubusercontent.com/u/88216225?v=4?s=100" width="100px;" alt="Olivier Zalmanski"/><br /><sub><b>Olivier Zalmanski</b></sub></a><br /><a href="#maintenance-olivierzal" title="Maintenance">🚧</a> <a href="https://github.com/michaelfaith/eslint-plugin-package-json/commits?author=olivierzal" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://patrikcsak.com"><img src="https://avatars.githubusercontent.com/u/4766244?v=4?s=100" width="100px;" alt="Patrik Csak"/><br /><sub><b>Patrik Csak</b></sub></a><br /><a href="https://github.com/michaelfaith/eslint-plugin-package-json/issues?q=author%3Apatrik-csak" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/rakleed"><img src="https://avatars.githubusercontent.com/u/19418601?v=4?s=100" width="100px;" alt="Pavel"/><br /><sub><b>Pavel</b></sub></a><br /><a href="#ideas-rakleed" title="Ideas, Planning, & Feedback">🤔</a> <a href="#tool-rakleed" title="Tools">🔧</a> <a href="https://github.com/michaelfaith/eslint-plugin-package-json/commits?author=rakleed" title="Documentation">📖</a> <a href="https://github.com/michaelfaith/eslint-plugin-package-json/commits?author=rakleed" title="Code">💻</a> <a href="https://github.com/michaelfaith/eslint-plugin-package-json/issues?q=author%3Arakleed" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://sasial.dev"><img src="https://avatars.githubusercontent.com/u/44125644?v=4?s=100" width="100px;" alt="Sasial"/><br /><sub><b>Sasial</b></sub></a><br /><a href="https://github.com/michaelfaith/eslint-plugin-package-json/commits?author=sasial-dev" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/belozer"><img src="https://avatars.githubusercontent.com/u/1655916?v=4?s=100" width="100px;" alt="Sergey Belozyorcev"/><br /><sub><b>Sergey Belozyorcev</b></sub></a><br /><a href="#ideas-belozer" title="Ideas, Planning, & Feedback">🤔</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://shayan-zamani.me"><img src="https://avatars.githubusercontent.com/u/81762186?v=4?s=100" width="100px;" alt="Shayan Zamani"/><br /><sub><b>Shayan Zamani</b></sub></a><br /><a href="#ideas-ShayanTheNerd" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/michaelfaith/eslint-plugin-package-json/commits?author=ShayanTheNerd" title="Documentation">📖</a> <a href="https://github.com/michaelfaith/eslint-plugin-package-json/commits?author=ShayanTheNerd" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Sigmabrogz"><img src="https://avatars.githubusercontent.com/u/122412346?v=4?s=100" width="100px;" alt="Sigmabro"/><br /><sub><b>Sigmabro</b></sub></a><br /><a href="https://github.com/michaelfaith/eslint-plugin-package-json/commits?author=Sigmabrogz" title="Code">💻</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/sirugh"><img src="https://avatars.githubusercontent.com/u/1278869?v=4?s=100" width="100px;" alt="Stephen"/><br /><sub><b>Stephen</b></sub></a><br /><a href="https://github.com/michaelfaith/eslint-plugin-package-json/commits?author=sirugh" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://hyoban.cc"><img src="https://avatars.githubusercontent.com/u/38493346?v=4?s=100" width="100px;" alt="Stephen Zhou"/><br /><sub><b>Stephen Zhou</b></sub></a><br /><a href="https://github.com/michaelfaith/eslint-plugin-package-json/issues?q=author%3Ahyoban" title="Bug reports">🐛</a> <a href="https://github.com/michaelfaith/eslint-plugin-package-json/commits?author=hyoban" title="Code">💻</a> <a href="#ideas-hyoban" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/michaelfaith/eslint-plugin-package-json/commits?author=hyoban" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.wesleytodd.com/"><img src="https://avatars.githubusercontent.com/u/1027776?v=4?s=100" width="100px;" alt="Wes Todd"/><br /><sub><b>Wes Todd</b></sub></a><br /><a href="#ideas-wesleytodd" title="Ideas, Planning, & Feedback">🤔</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://ota-meshi.github.io/"><img src="https://avatars.githubusercontent.com/u/16508807?v=4?s=100" width="100px;" alt="Yosuke Ota"/><br /><sub><b>Yosuke Ota</b></sub></a><br /><a href="https://github.com/michaelfaith/eslint-plugin-package-json/issues?q=author%3Aota-meshi" title="Bug reports">🐛</a> <a href="https://github.com/michaelfaith/eslint-plugin-package-json/commits?author=ota-meshi" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/b3rnhard"><img src="https://avatars.githubusercontent.com/u/10774404?v=4?s=100" width="100px;" alt="b3rnhard"/><br /><sub><b>b3rnhard</b></sub></a><br /><a href="https://github.com/michaelfaith/eslint-plugin-package-json/issues?q=author%3Ab3rnhard" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/chouchouji"><img src="https://avatars.githubusercontent.com/u/70570907?v=4?s=100" width="100px;" alt="chouchouji"/><br /><sub><b>chouchouji</b></sub></a><br /><a href="https://github.com/michaelfaith/eslint-plugin-package-json/commits?author=chouchouji" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/michaelfaith"><img src="https://avatars.githubusercontent.com/u/8071845?v=4?s=100" width="100px;" alt="michael faith"/><br /><sub><b>michael faith</b></sub></a><br /><a href="#infra-michaelfaith" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/michaelfaith/eslint-plugin-package-json/commits?author=michaelfaith" title="Code">💻</a> <a href="#maintenance-michaelfaith" title="Maintenance">🚧</a> <a href="#ideas-michaelfaith" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/michaelfaith/eslint-plugin-package-json/issues?q=author%3Amichaelfaith" title="Bug reports">🐛</a> <a href="#tool-michaelfaith" title="Tools">🔧</a> <a href="https://github.com/michaelfaith/eslint-plugin-package-json/commits?author=michaelfaith" title="Documentation">📖</a> <a href="#projectManagement-michaelfaith" title="Project Management">📆</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://roottool.vercel.app"><img src="https://avatars.githubusercontent.com/u/11808736?v=4?s=100" width="100px;" alt="roottool"/><br /><sub><b>roottool</b></sub></a><br /><a href="https://github.com/michaelfaith/eslint-plugin-package-json/commits?author=roottool" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/sunnytsang1998"><img src="https://avatars.githubusercontent.com/u/207208443?v=4?s=100" width="100px;" alt="sunnytsang1998"/><br /><sub><b>sunnytsang1998</b></sub></a><br /><a href="https://github.com/michaelfaith/eslint-plugin-package-json/issues?q=author%3Asunnytsang1998" title="Bug reports">🐛</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+## License
+
+See the [LICENSE](./LICENSE.md) file for license rights and limitations (MIT).
